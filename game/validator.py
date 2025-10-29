@@ -1,9 +1,7 @@
 import re
 
-
 def validate(sentence: str, rule: str) -> bool:
-    """Return True if sentence satisfies the given formal language rule."""
-    dispatch = {
+    rules = {
         "a_star_b_star":        lambda s: bool(re.fullmatch(r'a*b*', s)),
         "balanced_parens":      _balanced_parens,
         "palindrome":           lambda s: s == s[::-1],
@@ -14,9 +12,8 @@ def validate(sentence: str, rule: str) -> bool:
         "a_star_b_star_c":      lambda s: bool(re.fullmatch(r'a*b*c*', s)),
         "a_star_b_plus_c":      lambda s: bool(re.fullmatch(r'a*b+c+', s)),
     }
-    fn = dispatch.get(rule)
+    fn = rules.get(rule)
     return fn(sentence) if fn else False
-
 
 def _balanced_parens(s: str) -> bool:
     stack = []
