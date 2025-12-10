@@ -1,82 +1,52 @@
 # Formal Language Typing Game
 
-A Python-based typing game built with Tkinter that tests your understanding of formal language theory concepts. Players must identify and type strings that match specific language rules within a time limit.
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
 
-## 🎮 Game Overview
+A Tkinter desktop game that teaches formal language theory through interactive typing challenges. Players type strings that satisfy regular expression rules and formal language patterns under a countdown timer.
 
-This educational game challenges players to recognize patterns in formal languages including:
-- Regular expressions (a*b*, a+b+c, a*b*c, etc.)
-- Balanced parentheses
-- Palindromes
-- Binary patterns (alternating, containing specific substrings)
+## What It Does
 
-## ✨ Features
+Each round displays a string and its formal language rule (e.g. `a*b*`, balanced parentheses, palindrome). The player types a string that satisfies the rule — correct answers score +10, wrong answers lose 5. Nine distinct rules covering regular expressions, context-free patterns, and string properties.
 
-- **9 Different Language Rules**: Various patterns to test your formal language knowledge
-- **Scoring System**: +10 points for correct answers, -5 for wrong answers
-- **45-Second Timer**: Race against time to identify as many patterns as possible
-- **Skip Option**: Skip difficult sentences if needed
-- **Visual Feedback**: Clear indication of correct/incorrect answers
-- **Restart Capability**: Play multiple rounds
+## Rules Covered
 
-## 📋 Language Rules Included
+| Rule | Pattern | Example |
+|------|---------|---------|
+| `a*b*` | Zero or more a's followed by b's | `aaaabbbb` |
+| Balanced Parentheses | Matched open/close pairs | `(())` |
+| Palindrome | Reads same forwards and backwards | `racecar` |
+| `(01)*` | Alternating 0 and 1 | `0101` |
+| Contains 101 | Substring match | `00101` |
+| Ends in 01 | Suffix match | `01101` |
+| `a+b+c+` | One or more of each | `aaabbbccc` |
 
-| Rule | Description | Example |
-|------|-------------|---------|
-| `a*b*` | Zero or more 'a's followed by zero or more 'b's | `aaaabbbb` |
-| `balanced_parentheses` | Properly nested parentheses | `(())` |
-| `palindrome` | Reads the same forwards and backwards | `racecar` |
-| `alternating_01` | Alternating 0s and 1s | `01` |
-| `contains_101` | Contains substring '101' | `00101` |
-| `ends_in_01` | Ends with '01' | `01101` |
-| `a+b+c` | One or more 'a's, then one or more 'b's, then one or more 'c's | `aaabbbccc` |
-| `a*b*c` | Zero or more 'a's, then zero or more 'b's, then zero or more 'c's | `aabbbccc` |
-| `a*b+c` | Zero or more 'a's, then one or more 'b's, then one or more 'c's | `aaabccc` |
-
-## 🛠️ Requirements
-
-- Python 3.x
-- Tkinter (included with standard Python installations)
-
-## 🚀 How to Run
-
-1. Make sure you have Python installed
-2. Clone this repository or download the files
-3. Run the game:
-   ```bash
-   python "Toc final.py"
-   ```
-
-## 🎯 How to Play
-
-1. Click **"Start Game"** to begin
-2. A sentence will appear on the screen
-3. Type the corresponding language rule (e.g., `a*b*`, `palindrome`, `balanced_parentheses`)
-4. Press **Enter** to submit your answer
-5. Score as many points as possible before time runs out!
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-Toc/
-├── Toc final.py          # Main game file
-├── README.md             # This file
-└── Formal Language Typing Game.pdf  # Project documentation
+├── game/
+│   ├── __init__.py
+│   ├── sentences.py    # Challenge data
+│   ├── validator.py    # Formal language validation engine
+│   └── ui.py           # Tkinter game UI
+├── main.py
+└── requirements.txt
 ```
 
-## 🧠 Educational Value
+## How to Run
 
-This game helps students learn and practice:
-- Regular expressions
-- Formal language theory
-- Pattern recognition
-- String manipulation concepts
+```bash
+python main.py
+```
 
-## 📝 License
+No external dependencies — uses Python's standard `tkinter` library only.
 
-This project is available for educational purposes.
+## Scoring
 
----
+- **+10** correct answer
+- **-5** wrong answer (minimum 0)
+- **45 seconds** per game
 
-*Created as a learning project for Formal Language Theory*
+## Author
 
+**Harshita Guduru** — [GitHub](https://github.com/guduruharshita) · [LinkedIn](https://linkedin.com/in/harshita-guduru)
