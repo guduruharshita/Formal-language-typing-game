@@ -1,1 +1,2 @@
-# No external dependencies — tkinter is bundled with Python 3.x
+# Standard library only -- no external packages required
+# tkinter is included with Python 3.x
