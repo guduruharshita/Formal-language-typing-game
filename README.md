@@ -117,3 +117,7 @@ Regular languages cannot enforce equal counts (e.g., #a = #b), making `aⁿbⁿ`
 | **Python Packaging** | `pyproject.toml`, `src/` layout, StrEnum, dataclasses |
 | **Testing** | 32 pytest tests — unit tests per language class + API integration tests |
 | **CI/CD** | GitHub Actions: ruff lint + pytest |
+
+---
+
+**Harshita Guduru** — [GitHub](https://github.com/guduruharshita) · [LinkedIn](https://linkedin.com/in/guduruharshita) · [Email](mailto:guduruharshita2001@gmail.com)
