@@ -6,7 +6,6 @@
 [![Challenges](https://img.shields.io/badge/Challenges-20-blueviolet)](src/formal_game/challenges.py)
 [![Validators](https://img.shields.io/badge/Validators-21-orange)](src/formal_game/validator.py)
 [![Tests](https://img.shields.io/badge/Tests-32%20passing-success?logo=pytest)](tests/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Interactive typing game for **formal language theory** — players type strings that satisfy language rules under a countdown timer. 20 challenge types across regular languages, context-free languages, and string properties, with 3 difficulty levels and a persistent leaderboard.
 
